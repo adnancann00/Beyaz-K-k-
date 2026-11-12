@@ -24,3 +24,8 @@ Sonra tarayıcıda http://localhost:8000 adresini açın.
 - `index.html`, `sitemap.xml` ve `robots.txt` içindeki `www.beyazkoskkuafor.com` örnek adresini gerçek alan adıyla değiştirin.
 - `vercel.json` içindeki `noindex` satırı siteyi Google'dan gizler. İşletme onay verince kaldırın.
 - Görseller işletmenin Google Maps fotoğraflarıdır. Yayından önce işletmenin onayı alınmalıdır.
+
+## Görselleri değiştirirken
+
+`vercel.json` görselleri tarayıcıda 30 gün önbellekte tutar. Bir görseli aynı adla değiştirdiğinizde
+`index.html` içindeki `?v=` sürüm etiketini de değiştirin; yoksa ziyaretçiler eski görseli görmeye devam eder.
