@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# ALAN ADI DEĞİŞTİRİLECEK
+Sitemap: https://www.beyazkoskkuafor.com/sitemap.xml
