@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Beyaz Köşk Kuaför Beşiktaş | Balyaj, Boya, Kesim ve Keratin</title>
   <meta name="description" content="Beşiktaş Barbaros Bulvarı No:6'da kuaför. Balyaj, ombre, saç boyama, kesim, keratin ve saç kaynak. Her gün 09:00 ile 22:00 arası açık. WhatsApp'tan randevu alın.">
-  <meta name="theme-color" content="#262a2d">
+  <meta name="theme-color" content="#e9d5d0">
   <!-- ALAN ADI DEĞİŞTİRİLECEK: aşağıdaki https://www.beyazkoskkuafor.com adresleri, sitemap.xml ve robots.txt içinde de geçiyor -->
   <link rel="canonical" href="https://www.beyazkoskkuafor.com/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="img/hero-750.jpg" imagesrcset="img/hero-750.jpg 750w, img/hero.jpg 1200w" imagesizes="100vw">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Red+Hat+Display:wght@400;500;600;700&family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,400..800&display=swap">
   <link rel="stylesheet" href="style.css">
 
   <!-- Yerel işletme şeması (Google için) -->
@@ -81,125 +81,148 @@
 
 <a class="skip" href="#hizmetler">İçeriğe geç</a>
 
+<!-- ÜST MENÜ: solda bağlantılar, ortada logo, sağda metin bağlantısı ve beyaz hap düğme -->
 <header class="header" id="top">
   <div class="wrap header__inner">
-    <a href="#top" class="brand">Beyaz Köşk</a>
-    <button class="menu-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="nav">
-      <span></span><span></span>
-    </button>
     <nav class="nav" id="nav" aria-label="Ana menü">
       <a href="#hizmetler">Hizmetler</a>
       <a href="#galeri">Galeri</a>
       <a href="#hakkimizda">Hakkımızda</a>
       <a href="#sss">Sorular</a>
       <a href="#iletisim">İletişim</a>
-      <a href="tel:+905456610914" class="btn btn--line-light btn--sm">Hemen ara</a>
+      <a href="tel:+905456610914" class="nav__call">Hemen ara</a>
     </nav>
+    <a href="#top" class="logo">Beyaz Köşk</a>
+    <div class="header__actions">
+      <a href="tel:+905456610914" class="header__link">Hemen ara</a>
+      <a href="#randevu" class="pill pill--white">Randevu al</a>
+    </div>
+    <button class="menu-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span>
+    </button>
   </div>
 </header>
 
 <main>
 
-  <!-- AÇILIŞ: tabeladaki isim, fotoğraf ve koyu katman üzerinde -->
+  <!-- AÇILIŞ -->
   <section class="hero" aria-labelledby="hero-title">
-    <!-- Görsel: işletmenin Google Maps fotoğrafı. Yayından önce onay alınacak ya da yeni çekimle değiştirilecek. -->
-    <img class="hero__img" src="img/hero-750.jpg" srcset="img/hero-750.jpg 750w, img/hero.jpg 1200w" sizes="100vw" alt="Beyaz Köşk salonunda, uzun bej balyajlı saç" width="1200" height="1600" fetchpriority="high">
-    <div class="wrap hero__inner">
-      <p class="hero__kicker">Kuaför, Barbaros Bulvarı No:6, Beşiktaş</p>
-      <h1 class="hero__title" id="hero-title">Beyaz Köşk<span class="visually-hidden"> Kuaför, Beşiktaş</span></h1>
-      <div class="hero__bottom">
+    <div class="wrap hero__grid">
+      <div class="hero__text">
+        <p class="hero__place"><span class="hero__rule" aria-hidden="true"></span>Kuaför, Barbaros Bulvarı No:6, Beşiktaş</p>
+        <h1 class="hero__title" id="hero-title">Beyaz <span class="hero__light">Köşk</span><span class="visually-hidden"> Kuaför, Beşiktaş</span></h1>
         <p class="hero__lead">Renk, balyaj, kesim ve bakım. Haftanın her günü 09:00 ile 22:00 arası açığız.</p>
         <div class="hero__actions">
-          <a href="#randevu" class="btn btn--light">Randevu al</a>
-          <a href="tel:+905456610914" class="btn btn--line-light hero__call">Hemen ara</a>
+          <a href="#randevu" class="pill pill--black pill--lg">Randevu al</a>
+          <a href="tel:+905456610914" class="hero__call">
+            <span class="hero__call-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+            </span>
+            <span class="hero__call-text">Hemen ara</span>
+          </a>
         </div>
+        <a class="rating" href="https://www.google.com/maps/search/?api=1&query=Beyaz%20K%C3%B6%C5%9Fk%20Kuaf%C3%B6r&query_place_id=ChIJ3SVSEfu3yhQRVJYPn0yewp4" target="_blank" rel="noopener">
+          <span class="rating__stars" aria-hidden="true">★★★★★</span>
+          Google'da 4,5 puan, 3.409 yorum
+        </a>
       </div>
-      <a class="rating" href="https://www.google.com/maps/search/?api=1&query=Beyaz%20K%C3%B6%C5%9Fk%20Kuaf%C3%B6r&query_place_id=ChIJ3SVSEfu3yhQRVJYPn0yewp4" target="_blank" rel="noopener">
-        <span class="rating__stars" aria-hidden="true">★★★★★</span>
-        Google'da 4,5 puan, 3.409 yorum
-      </a>
+      <div class="hero__visual">
+        <div class="hero__arch" aria-hidden="true"></div>
+        <!-- Görsel: işletmenin Google Maps fotoğrafı. Yayından önce onay alınacak. -->
+        <img class="hero__img" src="img/hero-750.jpg" srcset="img/hero-750.jpg 750w, img/hero.jpg 1200w" sizes="(min-width: 1000px) 520px, 90vw" alt="Beyaz Köşk salonunda, uzun bej balyajlı saç" width="1200" height="1600" fetchpriority="high">
+      </div>
     </div>
   </section>
 
-  <!-- HİZMETLER: salon hizmet listesi gibi -->
-  <!-- Hizmetler işletmenin paylaşımları ve Google yorumlarından derlendi. İşletmeyle teyit edilecek. -->
-  <section class="section" id="hizmetler" aria-labelledby="hizmet-title">
-    <div class="wrap split">
-      <div class="split__aside">
-        <h2 id="hizmet-title">Hizmetler</h2>
-        <p class="muted">Fiyat saç uzunluğuna ve işleme göre değişir. Arayın, bilgi verelim.</p>
+  <!-- 02 HAKKIMIZDA: siyah zemin, bej hap içinde rakamlar, sağda üç kapsül -->
+  <section class="section section--black" id="hakkimizda" aria-labelledby="hakkimizda-title">
+    <div class="wrap about">
+      <div class="about__text">
+        <h2 class="heading" id="hakkimizda-title"><span class="heading__no" aria-hidden="true">02/</span>Bulvardaki beyaz bina</h2>
+        <!-- Metin işletmeyle teyit edilecek -->
+        <div class="about__copy">
+          <p>Barbaros Bulvarı'nda sütunlu beyaz binayı gördüyseniz bizi buldunuz. Tabelada adımız yazıyor.</p>
+          <p>Kalabalık bir ekiple sabahtan akşama çalışıyoruz. Rengi ve kesimi acele etmeden, önce ne istediğinizi dinleyerek yapıyoruz.</p>
+        </div>
+        <div class="stats" role="list">
+          <div class="stats__item" role="listitem"><strong>3.409</strong><span>Google yorumu</span></div>
+          <div class="stats__item" role="listitem"><strong>4,5</strong><span>Google puanı</span></div>
+        </div>
+        <a href="#randevu" class="pill pill--blush">Randevu al</a>
       </div>
-      <ul class="menu">
-        <li class="menu__item">
-          <div><h3>Renk ve balyaj</h3><p>Ombre, balyaj, bej ve küllü tonlar. Rengi adım adım, saçı yıpratmadan açıyoruz.</p></div>
-          <a href="#randevu" data-service="Renk ve balyaj">Randevu al</a>
+      <div class="capsules">
+        <figure class="capsule capsule--1"><img src="img/cephe.jpg" alt="Barbaros Bulvarı'ndaki beyaz, sütunlu Beyaz Köşk binası" width="780" height="1040" loading="lazy" decoding="async"></figure>
+        <figure class="capsule capsule--2"><img src="img/galeri-3.jpg" alt="Salonun içi, duvar saati ve aynalar" width="640" height="640" loading="lazy" decoding="async"></figure>
+        <figure class="capsule capsule--3"><img src="img/hero-750.jpg" alt="Salonda çalışma alanı ve aynalar" width="750" height="1000" loading="lazy" decoding="async"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 HİZMETLER -->
+  <!-- Hizmetler işletmenin paylaşımları ve Google yorumlarından derlendi. İşletmeyle teyit edilecek. -->
+  <section class="section section--blush" id="hizmetler" aria-labelledby="hizmet-title">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 class="heading heading--dark" id="hizmet-title"><span class="heading__no" aria-hidden="true">03/</span>Hizmetler</h2>
+        <p class="section__note">Fiyat saç uzunluğuna ve işleme göre değişir. Arayın, bilgi verelim.</p>
+      </div>
+      <ul class="services">
+        <li class="service">
+          <h3>Renk ve balyaj</h3>
+          <p>Ombre, balyaj, bej ve küllü tonlar. Rengi adım adım, saçı yıpratmadan açıyoruz.</p>
+          <a href="#randevu" class="pill pill--outline" data-service="Renk ve balyaj">Randevu al</a>
         </li>
-        <li class="menu__item">
-          <div><h3>Kesim</h3><p>Küt, katlı ya da sadece uç alma.</p></div>
-          <a href="#randevu" data-service="Kesim">Randevu al</a>
+        <li class="service">
+          <h3>Kesim</h3>
+          <p>Küt, katlı ya da sadece uç alma.</p>
+          <a href="#randevu" class="pill pill--outline" data-service="Kesim">Randevu al</a>
         </li>
-        <li class="menu__item">
-          <div><h3>Keratin ve bakım</h3><p>Yıpranmış saça keratin ve onarıcı bakım. Renk sonrası cila.</p></div>
-          <a href="#randevu" data-service="Keratin ve bakım">Randevu al</a>
+        <li class="service">
+          <h3>Keratin ve bakım</h3>
+          <p>Yıpranmış saça keratin ve onarıcı bakım. Renk sonrası cila.</p>
+          <a href="#randevu" class="pill pill--outline" data-service="Keratin ve bakım">Randevu al</a>
         </li>
-        <li class="menu__item">
-          <div><h3>Saç kaynak</h3><p>Mikro ve medikal kaynak ile uzunluk ve hacim.</p></div>
-          <a href="#randevu" data-service="Saç kaynak">Randevu al</a>
+        <li class="service">
+          <h3>Saç kaynak</h3>
+          <p>Mikro ve medikal kaynak ile uzunluk ve hacim.</p>
+          <a href="#randevu" class="pill pill--outline" data-service="Saç kaynak">Randevu al</a>
         </li>
-        <li class="menu__item">
-          <div><h3>Fön ve dalga</h3><p>Günlük fön, maşa ve dalga.</p></div>
-          <a href="#randevu" data-service="Fön ve dalga">Randevu al</a>
+        <li class="service">
+          <h3>Fön ve dalga</h3>
+          <p>Günlük fön, maşa ve dalga.</p>
+          <a href="#randevu" class="pill pill--outline" data-service="Fön ve dalga">Randevu al</a>
         </li>
-        <li class="menu__item">
-          <div><h3>Özel gün</h3><p>Nişan, düğün ve davetler için saç. Prova için önceden arayın.</p></div>
-          <a href="#randevu" data-service="Özel gün">Randevu al</a>
+        <li class="service">
+          <h3>Özel gün</h3>
+          <p>Nişan, düğün ve davetler için saç. Prova için önceden arayın.</p>
+          <a href="#randevu" class="pill pill--outline" data-service="Özel gün">Randevu al</a>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- GALERİ: cepheden gelen kemerli çerçeveler -->
-  <!-- Görseller: işletmenin Google Maps fotoğrafları. Onayla kullanılacak ya da değiştirilecek. -->
-  <section class="section section--tint" id="galeri" aria-labelledby="galeri-title">
+  <!-- 04 GALERİ: kapsül çerçeveler -->
+  <!-- Görseller: işletmenin Google Maps fotoğrafları. Onayla kullanılacak. -->
+  <section class="section section--lavender" id="galeri" aria-labelledby="galeri-title">
     <div class="wrap">
-      <div class="head-row">
-        <h2 id="galeri-title">Salondan çıkan saçlar</h2>
+      <div class="section__head section__head--row">
+        <h2 class="heading heading--dark" id="galeri-title"><span class="heading__no" aria-hidden="true">04/</span>Salondan çıkan saçlar</h2>
         <a class="textlink" href="https://www.google.com/maps/search/?api=1&query=Beyaz%20K%C3%B6%C5%9Fk%20Kuaf%C3%B6r&query_place_id=ChIJ3SVSEfu3yhQRVJYPn0yewp4" target="_blank" rel="noopener">Tüm fotoğraflar Google'da</a>
       </div>
       <div class="gallery">
-        <figure><img src="img/galeri-1.jpg" alt="Küllü sarı, dalgalı uzun saç" width="640" height="698" loading="lazy" decoding="async"><figcaption>Küllü sarı dalga</figcaption></figure>
-        <figure><img src="img/galeri-2.jpg" alt="Bej balyaj, omuz altı saç" width="640" height="768" loading="lazy" decoding="async"><figcaption>Bej balyaj</figcaption></figure>
-        <figure><img src="img/galeri-3.jpg" alt="Kumraldan karamele ombre" width="640" height="640" loading="lazy" decoding="async"><figcaption>Karamel ombre</figcaption></figure>
-        <figure><img src="img/galeri-4.jpg" alt="Uzun saçta açık bej renk geçişi" width="640" height="640" loading="lazy" decoding="async"><figcaption>Bej renk geçişi</figcaption></figure>
+        <figure><div class="gallery__frame"><img src="img/galeri-1.jpg" alt="Küllü sarı, dalgalı uzun saç" width="640" height="698" loading="lazy" decoding="async"></div><figcaption>Küllü sarı dalga</figcaption></figure>
+        <figure><div class="gallery__frame"><img src="img/galeri-2.jpg" alt="Bej balyaj, omuz altı saç" width="640" height="768" loading="lazy" decoding="async"></div><figcaption>Bej balyaj</figcaption></figure>
+        <figure><div class="gallery__frame"><img src="img/galeri-3.jpg" alt="Kumraldan karamele ombre" width="640" height="640" loading="lazy" decoding="async"></div><figcaption>Karamel ombre</figcaption></figure>
+        <figure><div class="gallery__frame"><img src="img/galeri-4.jpg" alt="Uzun saçta açık bej renk geçişi" width="640" height="640" loading="lazy" decoding="async"></div><figcaption>Bej renk geçişi</figcaption></figure>
       </div>
     </div>
   </section>
 
-  <!-- HAKKIMIZDA -->
-  <section class="section" id="hakkimizda" aria-labelledby="hakkimizda-title">
-    <div class="wrap about">
-      <figure class="about__media">
-        <img src="img/cephe.jpg" alt="Barbaros Bulvarı'ndaki beyaz, sütunlu Beyaz Köşk binası" width="780" height="1040" loading="lazy" decoding="async">
-        <figcaption class="door-plate" aria-label="Adres: Barbaros Bulvarı numara 6">
-          <span class="door-plate__street">Barbaros Blv.</span>
-          <span class="door-plate__no">6</span>
-        </figcaption>
-      </figure>
-      <div class="about__text">
-        <h2 id="hakkimizda-title">Bulvardaki beyaz bina</h2>
-        <!-- Metin işletmeyle teyit edilecek -->
-        <p>Barbaros Bulvarı'nda sütunlu beyaz binayı gördüyseniz bizi buldunuz. Tabelada adımız yazıyor.</p>
-        <p>Kalabalık bir ekiple sabahtan akşama çalışıyoruz. Rengi ve kesimi acele etmeden, önce ne istediğinizi dinleyerek yapıyoruz.</p>
-        <a href="#randevu" class="btn btn--green">Randevu al</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- NEDEN BİZ -->
-  <section class="section section--green" id="neden-biz" aria-labelledby="neden-title">
-    <div class="wrap split">
-      <div class="split__aside">
-        <h2 id="neden-title">Neden Beyaz Köşk</h2>
+  <!-- 05 NEDEN BİZ -->
+  <section class="section section--black" id="neden-biz" aria-labelledby="neden-title">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 class="heading" id="neden-title"><span class="heading__no" aria-hidden="true">05/</span>Neden Beyaz Köşk</h2>
       </div>
       <ul class="reasons">
         <li><h3>Binlerce yorum</h3><p>Google'da 3.409 yorum ve 4,5 puan.</p></li>
@@ -210,15 +233,17 @@
     </div>
   </section>
 
-  <!-- YORUMLAR: Google yorumlarından kısaltılmış alıntılar -->
-  <section class="section section--tint" id="yorumlar" aria-labelledby="yorum-title">
+  <!-- 06 YORUMLAR: Google yorumlarından kısaltılmış alıntılar -->
+  <section class="section section--blush" id="yorumlar" aria-labelledby="yorum-title">
     <div class="wrap">
-      <h2 id="yorum-title" class="visually-hidden">Müşteri yorumları</h2>
-      <figure class="quote quote--lead">
-        <blockquote><p>“Kızıl kahve istediğim riskli rengi kumral saçıma çok güzel uyguladı. Cila için on gün sonra geldiğimde de tonla yeniden ilgilenildi.”</p></blockquote>
-        <figcaption>Saçını ilk kez boyatan bir müşteri, Google yorumu</figcaption>
-      </figure>
-      <div class="quotes">
+      <div class="section__head">
+        <h2 class="heading heading--dark" id="yorum-title"><span class="heading__no" aria-hidden="true">06/</span>Müşteri yorumları</h2>
+      </div>
+      <div class="reviews">
+        <figure class="quote quote--lead">
+          <blockquote><p>“Kızıl kahve istediğim riskli rengi kumral saçıma çok güzel uyguladı. Cila için on gün sonra geldiğimde de tonla yeniden ilgilenildi.”</p></blockquote>
+          <figcaption>Saçını ilk kez boyatan bir müşteri, Google yorumu</figcaption>
+        </figure>
         <figure class="quote">
           <blockquote><p>“Ombre balyaj için gittim. Her isteğimi dinleyip özenle ilgilendi. Hiç yıpranma ya da kopma olmadı.”</p></blockquote>
           <figcaption>Ombre balyaj, Google yorumu</figcaption>
@@ -231,11 +256,11 @@
     </div>
   </section>
 
-  <!-- SSS -->
-  <section class="section" id="sss" aria-labelledby="sss-title">
-    <div class="wrap split">
-      <div class="split__aside">
-        <h2 id="sss-title">Sık sorulanlar</h2>
+  <!-- 07 SSS -->
+  <section class="section section--lavender" id="sss" aria-labelledby="sss-title">
+    <div class="wrap faq-wrap">
+      <div class="section__head">
+        <h2 class="heading heading--dark" id="sss-title"><span class="heading__no" aria-hidden="true">07/</span>Sık sorulanlar</h2>
       </div>
       <div class="faq">
         <details>
@@ -262,70 +287,71 @@
     </div>
   </section>
 
-  <!-- RANDEVU (Netlify Forms) -->
-  <section class="section section--tint section--booking" id="randevu" aria-labelledby="randevu-title">
-    <div class="wrap split">
-      <div class="split__aside booking__intro">
-        <h2 id="randevu-title">Randevu al</h2>
+  <!-- 08 RANDEVU (Supabase) -->
+  <section class="section section--black section--booking" id="randevu" aria-labelledby="randevu-title">
+    <div class="wrap booking">
+      <div class="booking__intro">
+        <h2 class="heading" id="randevu-title"><span class="heading__no" aria-hidden="true">08/</span>Randevu al</h2>
         <p>Formu gönderin, sizi arayıp saati birlikte belirleyelim. Acelesi olanlar doğrudan arayabilir.</p>
         <a href="tel:+905456610914" class="phone">0545 661 09 14</a>
       </div>
-      <form class="form" id="randevu-form" novalidate>
-        <p hidden><label>Bu alanı boş bırakın <input name="bot-field" id="bot-field"></label></p>
-        <div class="form__row">
-          <div class="field">
-            <label for="ad">Ad soyad</label>
-            <input type="text" id="ad" name="ad" required autocomplete="name">
+      <div class="booking__card">
+        <form class="form" id="randevu-form" novalidate>
+          <p hidden><label>Bu alanı boş bırakın <input name="bot-field" id="bot-field"></label></p>
+          <div class="form__row">
+            <div class="field">
+              <label for="ad">Ad soyad</label>
+              <input type="text" id="ad" name="ad" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="telefon">Telefon</label>
+              <input type="tel" id="telefon" name="telefon" required autocomplete="tel" inputmode="tel" placeholder="05XX XXX XX XX" pattern="[0-9 +()]{10,17}">
+            </div>
           </div>
           <div class="field">
-            <label for="telefon">Telefon</label>
-            <input type="tel" id="telefon" name="telefon" required autocomplete="tel" inputmode="tel" placeholder="05XX XXX XX XX" pattern="[0-9 +()]{10,17}">
-          </div>
-        </div>
-        <div class="field">
-          <label for="hizmet">Hizmet</label>
-          <select id="hizmet" name="hizmet" required>
-            <option value="">Hizmet seçin</option>
-            <option>Renk ve balyaj</option>
-            <option>Kesim</option>
-            <option>Keratin ve bakım</option>
-            <option>Saç kaynak</option>
-            <option>Fön ve dalga</option>
-            <option>Özel gün</option>
-            <option>Diğer</option>
-          </select>
-        </div>
-        <div class="form__row">
-          <div class="field">
-            <label for="tarih">Gün</label>
-            <input type="date" id="tarih" name="tarih" required>
-          </div>
-          <div class="field">
-            <label for="saat">Saat</label>
-            <select id="saat" name="saat" required>
-              <option value="">Önce gün seçin</option>
+            <label for="hizmet">Hizmet</label>
+            <select id="hizmet" name="hizmet" required>
+              <option value="">Hizmet seçin</option>
+              <option>Renk ve balyaj</option>
+              <option>Kesim</option>
+              <option>Keratin ve bakım</option>
+              <option>Saç kaynak</option>
+              <option>Fön ve dalga</option>
+              <option>Özel gün</option>
+              <option>Diğer</option>
             </select>
           </div>
-        </div>
-        <div class="field">
-          <label for="not">Not (isteğe bağlı)</label>
-          <textarea id="not" name="not" rows="2" placeholder="Örneğin: saç boyum omuz altı, rengi açtırmak istiyorum"></textarea>
-        </div>
-        <button type="submit" class="btn btn--green btn--block">Randevu talebini gönder</button>
-        <p class="form__hint">Talebiniz salona iletilir. Salon sizi arayıp saati onaylar.</p>
-        <p class="form__status" role="status" aria-live="polite"></p>
-      </form>
+          <div class="form__row">
+            <div class="field">
+              <label for="tarih">Gün</label>
+              <input type="date" id="tarih" name="tarih" required>
+            </div>
+            <div class="field">
+              <label for="saat">Saat</label>
+              <select id="saat" name="saat" required>
+                <option value="">Önce gün seçin</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="not">Not (isteğe bağlı)</label>
+            <textarea id="not" name="not" rows="2" placeholder="Örneğin: saç boyum omuz altı, rengi açtırmak istiyorum"></textarea>
+          </div>
+          <button type="submit" class="pill pill--black pill--lg pill--block">Randevu talebini gönder</button>
+          <p class="form__hint">Talebiniz salona iletilir. Salon sizi arayıp saati onaylar.</p>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
 
-      <!-- Gönderim sonrası onay -->
-      <div class="done" id="randevu-done" hidden tabindex="-1">
-        <h3>Talebiniz alındı</h3>
-        <dl class="done__summary" id="done-summary"></dl>
-        <p class="done__text">Salon en kısa sürede sizi arayıp saati onaylayacak. Acele ediyorsanız WhatsApp'tan da haber verebilirsiniz.</p>
-        <div class="done__actions">
-          <a class="btn btn--green" id="done-wa" href="https://wa.me/905456610914" target="_blank" rel="noopener">WhatsApp'tan haber ver</a>
-          <button type="button" class="btn btn--line" id="done-new">Yeni randevu</button>
+        <div class="done" id="randevu-done" hidden tabindex="-1">
+          <h3>Talebiniz alındı</h3>
+          <dl class="done__summary" id="done-summary"></dl>
+          <p class="done__text">Salon en kısa sürede sizi arayıp saati onaylayacak. Acele ediyorsanız WhatsApp'tan da haber verebilirsiniz.</p>
+          <div class="done__actions">
+            <a class="pill pill--black" id="done-wa" href="https://wa.me/905456610914" target="_blank" rel="noopener">WhatsApp'tan haber ver</a>
+            <button type="button" class="pill pill--outline" id="done-new">Yeni randevu</button>
+          </div>
+          <p class="done__text">Sorunuz varsa arayın: <a href="tel:+905456610914">0545 661 09 14</a></p>
         </div>
-        <p class="done__text">Sorunuz varsa arayın: <a href="tel:+905456610914">0545 661 09 14</a></p>
       </div>
     </div>
   </section>
@@ -335,13 +361,11 @@
 <footer class="footer" id="iletisim">
   <div class="wrap footer__grid">
     <div>
-      <p class="brand brand--footer">Beyaz Köşk</p>
+      <p class="logo logo--footer">Beyaz Köşk</p>
       <address>
         <a href="https://www.google.com/maps/search/?api=1&query=Beyaz%20K%C3%B6%C5%9Fk%20Kuaf%C3%B6r&query_place_id=ChIJ3SVSEfu3yhQRVJYPn0yewp4" target="_blank" rel="noopener">Cihannüma Mah., Barbaros Blv. No:6<br>34353 Beşiktaş, İstanbul</a><br>
         <a href="tel:+905456610914">0545 661 09 14</a><br>
         <a href="https://wa.me/905456610914" target="_blank" rel="noopener">WhatsApp'tan yazın</a>
-        <!-- E-POSTA: işletmenin gerçek adresi öğrenilince aşağıdaki satırı açın
-        <br><a href="mailto:ADRES@ALANADI.com">ADRES@ALANADI.com</a> -->
       </address>
     </div>
     <div>
@@ -351,7 +375,7 @@
         <tr><th scope="row">Cumartesi</th><td>09:00 ile 22:00</td></tr>
         <tr><th scope="row">Pazar</th><td>09:00 ile 22:00</td></tr>
       </table>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=41.044355,29.0075428&destination_place_id=ChIJ3SVSEfu3yhQRVJYPn0yewp4" target="_blank" rel="noopener" class="btn btn--line-light btn--sm">Yol tarifi al</a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=41.044355,29.0075428&destination_place_id=ChIJ3SVSEfu3yhQRVJYPn0yewp4" target="_blank" rel="noopener" class="pill pill--blush">Yol tarifi al</a>
     </div>
     <div class="footer__map">
       <iframe title="Beyaz Köşk Kuaför haritada" src="https://www.google.com/maps?q=41.044355,29.0075428&z=17&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -363,12 +387,9 @@
   </div>
 </footer>
 
-<div class="mobile-bar" id="mobile-bar">
-  <a href="tel:+905456610914" class="btn btn--line" aria-label="Hemen ara: 0545 661 09 14">
-    <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
-    0545 661 09 14
-  </a>
-  <a href="#randevu" class="btn btn--green">Randevu al</a>
+<div class="mobile-bar is-hidden" id="mobile-bar">
+  <a href="tel:+905456610914" class="pill pill--outline" aria-label="Hemen ara: 0545 661 09 14">0545 661 09 14</a>
+  <a href="#randevu" class="pill pill--black">Randevu al</a>
 </div>
 
 <script src="script.js"></script>
