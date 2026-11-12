@@ -1,5 +1,9 @@
 // Salonun WhatsApp numarası (ülke kodu ile, boşluksuz)
 const WHATSAPP = '905456610914';
+// Supabase: randevu talepleri buraya kaydedilir.
+// Bu anahtar herkese açık olacak şekilde tasarlanmıştır; tablo kuralları yalnızca ekleme izni verir.
+const SUPABASE_URL = 'https://ftfdgduujohjieenvnnf.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_vMhmdMUHdh21Z-Gr90QqYA_3ahxQNY1';
 // Çalışma saatleri: her gün 09:00 ile 22:00. Son randevu 21:30.
 const OPEN = 9 * 60;
 const LAST_SLOT = 21 * 60 + 30;
@@ -125,33 +129,74 @@ document.getElementById('done-new').addEventListener('click', () => {
   document.getElementById('ad').focus();
 });
 
-// Site Netlify'da yayındaysa talep panelde de kayıt altına alınır
-function saveToNetlify(formData) {
-  const hosted = location.protocol.startsWith('http') && !['localhost', '127.0.0.1'].includes(location.hostname);
-  if (!hosted) return;
-  fetch('/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams(formData).toString(),
-  }).catch(() => { /* WhatsApp mesajı zaten hazır; kayıt hatası müşteriyi durdurmaz */ });
+// Talebi Supabase'deki "randevular" tablosuna kaydeder
+async function saveBooking(data) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 12000);
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/randevular`, {
+      method: 'POST',
+      headers: {
+        apikey: SUPABASE_KEY,
+        'Content-Type': 'application/json',
+        Prefer: 'return=minimal',
+      },
+      body: JSON.stringify({
+        ad: data.ad,
+        telefon: data.telefon,
+        hizmet: data.hizmet,
+        tarih: data.tarih,
+        saat: data.saat,
+        notlar: data.not || null,
+      }),
+      signal: controller.signal,
+    });
+    return res.ok;
+  } catch {
+    return false;
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
-form.addEventListener('submit', (e) => {
+const submitBtn = form.querySelector('button[type="submit"]');
+const submitLabel = submitBtn.innerHTML;
+
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
   if (!form.reportValidity()) return;
 
   const formData = new FormData(form);
   const data = Object.fromEntries(['ad', 'telefon', 'hizmet', 'tarih', 'saat', 'not']
     .map((k) => [k, String(formData.get(k) || '').trim()]));
+  const waUrl = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(buildMessage(data))}`;
 
-  const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(buildMessage(data))}`;
+  // Bot tuzağı doluysa kaydetmeden başarı göster
+  const isBot = Boolean(formData.get('bot-field'));
 
-  // Pencere, tıklamayla aynı anda açılmalı; yoksa tarayıcı engeller
-  window.open(url, '_blank', 'noopener');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Gönderiliyor...';
+  statusEl.textContent = '';
 
-  saveToNetlify(formData);
+  const saved = isBot ? true : await saveBooking(data);
+
+  submitBtn.disabled = false;
+  submitBtn.innerHTML = submitLabel;
+
+  if (!saved) {
+    statusEl.innerHTML = '';
+    statusEl.append('Talebiniz kaydedilemedi. Bağlantınızı kontrol edip tekrar deneyin ya da ');
+    const wa = document.createElement('a');
+    wa.href = waUrl;
+    wa.target = '_blank';
+    wa.rel = 'noopener';
+    wa.textContent = 'WhatsApp\'tan yazın';
+    statusEl.append(wa, '.');
+    return;
+  }
+
   showSummary(data);
-  document.getElementById('done-wa').href = url;
+  document.getElementById('done-wa').href = waUrl;
   form.hidden = true;
   done.hidden = false;
   done.focus();
