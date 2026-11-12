@@ -538,3 +538,7 @@ address a:active { opacity: .45; }
 .gallery figure:first-child .gallery__frame img { object-position: 50% 40%; }
 .gallery figure:nth-child(2) .gallery__frame img, .gallery figure:nth-child(3) .gallery__frame img { object-position: 50% 40%; }
 .gallery figure:nth-child(4) .gallery__frame img { object-position: 50% 40%; }
+/* Hakkımızda kapsülleri: işletmenin fotoğrafları */
+.capsule--1 img { object-position: 47% 55%; }
+.capsule--2 img { object-position: 45% 55%; }
+.capsule--3 img { object-position: 35% 55%; }
