@@ -535,4 +535,6 @@ address a:active { opacity: .45; }
 .hero__img { object-position: 50% 18%; }
 .capsule--1 img, .capsule--2 img, .capsule--3 img { object-position: 50% 40%; }
 .gallery__frame img { object-position: 50% 35%; }
-.gallery figure:first-child .gallery__frame img { object-position: 46% 30%; }
+.gallery figure:first-child .gallery__frame img { object-position: 50% 40%; }
+.gallery figure:nth-child(2) .gallery__frame img, .gallery figure:nth-child(3) .gallery__frame img { object-position: 50% 40%; }
+.gallery figure:nth-child(4) .gallery__frame img { object-position: 50% 40%; }
