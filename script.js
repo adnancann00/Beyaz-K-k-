@@ -206,7 +206,10 @@ form.addEventListener('submit', async (e) => {
 const bar = document.getElementById('mobile-bar');
 const heroEl = document.querySelector('.hero');
 const bookingEl = document.getElementById('randevu');
+const headerEl = document.querySelector('.header');
 function updateBar() {
+  // Üst menü kaydırınca "yüzen" katmana geçer (gölge kazanır)
+  headerEl.classList.toggle('is-scrolled', window.scrollY > 8);
   const vh = window.innerHeight;
   const hero = heroEl.getBoundingClientRect();
   const booking = bookingEl.getBoundingClientRect();

@@ -1,3 +1,5 @@
 .DS_Store
 .env
 .vercel
+temporary screenshots/
+_shot_frame.html

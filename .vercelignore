@@ -1,3 +1,6 @@
 supabase/
 README.md
 .gitignore
+temporary screenshots/
+screenshot.py
+_shot_frame.html
